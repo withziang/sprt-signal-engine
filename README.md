@@ -1,4 +1,11 @@
 # Sport betting signal generator engine
+## Getting started
+- install cmake
+- install g++ 17
+- `mkdir build`
+- `cd build`
+- `cmake ..`
+- `cmake --build .`
 
 ## Ingest data format
 ```
