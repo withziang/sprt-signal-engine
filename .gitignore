@@ -1,0 +1,97 @@
+# ===============================
+# Build artifacts
+# ===============================
+build/
+bin/
+out/
+dist/
+cmake-build-*/
+
+# Object files
+*.o
+*.obj
+*.lo
+
+# Static & dynamic libraries
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+
+# ===============================
+# CMake
+# ===============================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+
+# ===============================
+# Make
+# ===============================
+*.d
+*.mk
+
+# ===============================
+# Debug / profiling
+# ===============================
+*.gdb
+*.lldb
+*.prof
+*.gcno
+*.gcda
+*.gcov
+
+# ===============================
+# Logs & temp files
+# ===============================
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# ===============================
+# IDE / Editor
+# ===============================
+
+# VS Code
+.vscode/
+
+# CLion / JetBrains
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+
+# ===============================
+# OS files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Dependency managers
+# ===============================
+vcpkg_installed/
+.vcpkg-root
+
+# ===============================
+# Local config (never commit)
+# ===============================
+.env
