@@ -3,4 +3,4 @@
 
 namespace sse{
     IngestResult ingest_tick(const IngestInput& input);
-};
+}
