@@ -16,4 +16,4 @@ string team2_odd
 ```
 
 ## Algos
-- spread cross platform
+- spread cross platform  -- XSP
