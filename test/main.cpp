@@ -11,13 +11,13 @@ int main(){
 
     switch (output){
         case sse::IngestResult::Accepted:
-            std::cout << "Accepted" << std::endl;
+            std::cout << "Accepted\n";
             break;
         case sse::IngestResult::RejectedInvalid:
-            std::cout << "Rejected due to invalid" << std::endl;
+            std::cout << "Rejected due to invalid\n";
             break;
         case sse::IngestResult::RejectedStale:
-            std::cout << "Rejected due to stale" << std::endl;
+            std::cout << "Rejected due to stale\n";
             break;
     }
 }

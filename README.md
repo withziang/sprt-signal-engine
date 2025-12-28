@@ -15,7 +15,7 @@ std::string league;
 std::string game_name;
 std::string team1;
 std::string team2;
-sse::BetType bet_type;
+BetType bet_type;
 double team1_line;
 double team1_odd;
 double team2_line;
