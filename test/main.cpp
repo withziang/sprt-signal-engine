@@ -19,5 +19,8 @@ int main(){
         case sse::IngestResult::RejectedStale:
             std::cout << "Rejected due to stale\n";
             break;
+        case sse::IngestResult::Reject:
+            std::cout << "Rejected\n";
+            break;
     }
 }

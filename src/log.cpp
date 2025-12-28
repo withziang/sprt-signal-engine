@@ -9,10 +9,10 @@ namespace sse{
     }
 
     void Logger::log(const std::string& msg){
-        std::cout << "Log: " << msg;
+        std::cout << "Log: " << msg << "\n";
     }
 
     void Logger::error(const std::string& msg){
-        std::cout << "Error: " << msg;
+        std::cout << "Error: " << msg << "\n";
     }
 }
