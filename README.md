@@ -1,6 +1,6 @@
 # Sport betting signal generator engine
 This is a c++ library that ingests sport betting data and produce arbitrage signal.
-## Getting started
+## To run test for this library
 - install cmake
 - install g++ 17
 - `mkdir build`
@@ -8,6 +8,7 @@ This is a c++ library that ingests sport betting data and produce arbitrage sign
 - `cmake ..`
 - `cmake --build .`
 
+## Build this library to dynamic runtime library
 ## API
 - `IngestResult ingest_tick(const IngestInput& input) noexcept;`
 
