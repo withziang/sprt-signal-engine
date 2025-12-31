@@ -1,4 +1,4 @@
-# Sport betting signal generator engine
+# Sport betting signal engine
 A high-performance C++ library that ingests real-time sports betting market data and produces deterministic arbitrage signals with low latency and predictable behavior.
 
 ## Run tests for this library

@@ -9,7 +9,7 @@ namespace sse{
     constexpr std::int64_t MAX_TIMESTAMP_STALE_TOLERANCE = 1000;
 
     [[nodiscard]] bool is_ingest_invalid(const IngestInput& input){
-        return false;
+        return false; // STUB
     }
 
     [[nodiscard]] bool is_ingest_expired(std::int64_t timestamp){

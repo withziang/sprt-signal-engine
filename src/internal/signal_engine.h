@@ -7,5 +7,5 @@ namespace sse{
 		explicit SignalEngine(EngineConfig config);
 	private:
 		EngineConfig _engineConfig;
-	}
+	};
 }
