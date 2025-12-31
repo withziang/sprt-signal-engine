@@ -7,4 +7,8 @@ namespace sse{
         Sell,
         Arbitrage
     };
+
+    struct Order{ // NOT YET implemented
+        Signal signal;
+    };
 }

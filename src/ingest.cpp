@@ -1,16 +1,19 @@
 #include <sse/ingest.h>
 #include <sse/types.h>
+#include <sse/engine_config.h>
 #include "internal/log.h"
+#include "internal/normalize.h"
+#include "internal/signal_engine.h"
 
 #include <chrono>
-#include <cstdint>
+#include <memory>
+
+namespace {
+    std::unique_ptr<sse::SignalEngine> signalEngine = std::make_unique<sse::SignalEngine>(sse::EngineConfig{});
+}
 
 namespace sse{
     constexpr std::int64_t MAX_TIMESTAMP_STALE_TOLERANCE = 1000;
-
-    [[nodiscard]] bool is_ingest_invalid(const IngestInput& input){
-        return false; // STUB
-    }
 
     [[nodiscard]] bool is_ingest_expired(std::int64_t timestamp){
         const auto now = std::chrono::system_clock::now(); // TO DO: change to time cache
@@ -21,12 +24,15 @@ namespace sse{
     }
 
     IngestResult ingest_tick(const IngestInput& input) noexcept {
-        if (__builtin_expect(is_ingest_invalid(input), 0)){
-            return IngestResult::RejectedInvalid;
-        }
         if (__builtin_expect(is_ingest_expired(input.timestamp), 0)){
             return IngestResult::RejectedStale;
         }
-        return IngestResult::Accepted;
+        std::optional<IngestInput> normalized_input = normalize(input);
+        if (__builtin_expect(normalized_input.has_value(), 1)){
+            bool ingest_result = signalEngine->ingest_data(*normalized_input); // not used yet
+            return IngestResult::Accepted;
+        }else{
+            return IngestResult::RejectedInvalid;
+        }
     }
 }

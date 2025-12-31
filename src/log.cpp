@@ -1,5 +1,5 @@
 #include "internal/log.h"
-#include <string>
+
 #include <iostream>
 
 namespace sse{
