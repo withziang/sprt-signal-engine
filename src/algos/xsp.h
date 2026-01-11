@@ -6,4 +6,4 @@ namespace sse{
     public:
         bool on_market_update() override;
     };
-};
+}

@@ -5,4 +5,4 @@ namespace sse{
     public:
         virtual bool on_market_update() = 0;
     };
-};
+}

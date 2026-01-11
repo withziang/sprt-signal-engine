@@ -5,6 +5,16 @@
 
 #include <vector>
 #include <unordered_map>
+#include <functional>
+
+namespace std{
+	template<>
+	struct hash<sse::MarketKey>{
+		size_t operator()(const sse::MarketKey& k) const noexcept{
+			return 0; 	
+		}
+	};
+}
 
 namespace sse{
 	class SignalEngine{
@@ -12,9 +22,10 @@ namespace sse{
 		explicit SignalEngine(EngineConfig config);
 		bool ingest_data(const IngestInput& input);
 		bool send_orders(const std::vector<Order>& orders);
+
 	private:
 		EngineConfig _engineConfig;
 		std::vector<Order> trigger_run_all_algos();
-		std::unordered_map<MarketKey, Price> marketKey2Price;
+		std::unordered_map<MarketKey, Price> marketKey2Price; // missing a hash function
 	};
 }
