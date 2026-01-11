@@ -11,4 +11,12 @@ namespace sse{
     struct Order{ // NOT YET implemented
         Signal signal;
     };
+
+    struct MarketKey{
+
+    };
+
+    struct Price{
+
+    };
 }

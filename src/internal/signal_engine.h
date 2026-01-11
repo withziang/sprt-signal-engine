@@ -4,6 +4,7 @@
 #include <sse/types.h>
 
 #include <vector>
+#include <unordered_map>
 
 namespace sse{
 	class SignalEngine{
@@ -14,5 +15,6 @@ namespace sse{
 	private:
 		EngineConfig _engineConfig;
 		std::vector<Order> trigger_run_all_algos();
+		std::unordered_map<MarketKey, Price> marketKey2Price;
 	};
 }
