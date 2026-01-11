@@ -10,4 +10,8 @@ namespace sse{
 	bool SignalEngine::send_orders(const std::vector<Order>& orders){
 		return 1;
 	};
+
+	std::vector<Order> SignalEngine::trigger_run_all_algos(){
+		return {};
+	};
 }

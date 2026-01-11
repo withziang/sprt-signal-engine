@@ -9,7 +9,11 @@
 #include <memory>
 
 namespace {
-    std::unique_ptr<sse::SignalEngine> signalEngine = std::make_unique<sse::SignalEngine>(sse::EngineConfig{});
+    std::unique_ptr<sse::SignalEngine> signalEngine = []{ // Temporary solution -- move to public api
+        auto se = std::make_unique<sse::SignalEngine>(sse::EngineConfig{});
+
+        return se;
+    }();
 }
 
 namespace sse{
