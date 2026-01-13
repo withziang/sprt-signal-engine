@@ -4,6 +4,7 @@
 #include "internal/log.h"
 #include "internal/normalize.h"
 #include "internal/signal_engine.h"
+#include "algos/xsp.h"
 
 #include <chrono>
 #include <memory>
@@ -11,7 +12,8 @@
 namespace {
     std::unique_ptr<sse::SignalEngine> signalEngine = []{ // Temporary solution -- move to public api
         auto se = std::make_unique<sse::SignalEngine>(sse::EngineConfig{});
-
+        static sse::Xsp xsp_instance;
+        se->subscribe(&xsp_instance);
         return se;
     }();
 }

@@ -2,7 +2,7 @@
 #include "algos/algo.h"
 
 namespace sse{
-    class xsp : public algo{
+    class Xsp : public Algo{
     public:
         bool on_market_update() override;
     };

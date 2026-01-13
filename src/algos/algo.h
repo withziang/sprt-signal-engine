@@ -1,7 +1,7 @@
 #pragma once
 
 namespace sse{
-    class algo{
+    class Algo{
     public:
         virtual bool on_market_update() = 0;
     };

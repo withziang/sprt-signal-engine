@@ -17,6 +17,6 @@ namespace sse{
     };
 
     struct Price{
-
+        
     };
 }
